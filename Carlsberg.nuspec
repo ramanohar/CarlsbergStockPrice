@@ -10,7 +10,6 @@
 	<files>
 		<file src="bin\**\*" target="bin" />
 		<file src="Scripts\**\*" target="Scripts"/>
-		<file src="ApplicationInsights.config" target="ApplicationInsights.config" />
 		<file src="Global.asax" target="Global.asax" />
 		<file src="Web.config" target="Web.config" />
 		<file src="packages.config" target="packages.config" />
