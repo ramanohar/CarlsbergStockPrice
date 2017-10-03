@@ -1,6 +1,9 @@
 ﻿using CarlsbergStockPrice.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -12,14 +15,19 @@ namespace CarlsbergStockPrice.Controllers
     {
         Product[] products = new Product[]
         {
-            new Product { Id = 1, Name = "Carlsberg", Category = "Beer", Price = 200 },
+            new Product { Id = 1, Name = "CARL-B", Category = "Brewery", Price = 696 },
             
         };
 
         [Route("GetStockPrice")]
-        public IEnumerable<Product> GetStockPrice()
+        public string GetStockPrice()
         {
-            return products;
+
+            WebClient web_client = new WebClient();
+            var json = web_client.DownloadString(@"https://finance.google.com/finance?q=CARL-B&output=json");
+            //string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented);
+            return json;
+
         }
 
         
