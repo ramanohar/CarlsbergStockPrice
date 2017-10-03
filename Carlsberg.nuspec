@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>CarlsbergStockPriceApp</id>
+		<version>1.0.0.0</version>
+		<title>CarlsbergStockPriceApp Package</title>
+		<authors>Sitecore CoE</authors>
+		<description>CarlsbergStockPriceApp SetUp</description>
+	</metadata>
+	<files>
+		<file src="bin\**\*" target="bin" />
+		<file src="Scripts\**\*" target="Scripts"/>
+		<file src="Global.asax" target="Global.asax" />
+		<file src="Web.config" target="Web.config" />
+		<file src="packages.config" target="packages.config" />
+  </files>
+</package>
