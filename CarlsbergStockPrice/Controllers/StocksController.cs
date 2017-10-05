@@ -25,8 +25,10 @@ namespace CarlsbergStockPrice.Controllers
 
             WebClient web_client = new WebClient();
             var json = web_client.DownloadString(@"https://finance.google.com/finance?q=CARL-B&output=json");
-            //string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented);
-            return json; 
+            return JsonConvert.SerializeObject(json, Formatting.Indented);
+
+            //string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented); 
+            //return json; 
 
         }
 
