@@ -28,7 +28,7 @@ namespace CarlsbergStockPrice.Controllers
             return JsonConvert.SerializeObject(json, Formatting.Indented);
 
             //string jsonFormatted = JValue.Parse(json).ToString(Formatting.Indented); 
-            //return json; 
+            //return json;    
 
         }
 
